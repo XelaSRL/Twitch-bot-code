@@ -1,0 +1,17 @@
+{
+  "name": "twitch-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "https://docs.google.com/document/d/1WmV24RZ51lgdYOp88cNMhz2C-wRtrJh8KGK5JCtFHJY/edit?usp=sharing",
+  "dependencies": {
+    "insert-line": "^1.1.0",
+    "request": "^2.88.0",
+    "twitch-bot": "^1.3.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
