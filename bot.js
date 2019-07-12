@@ -1,12 +1,9 @@
 const TwitchBot = require('twitch-bot')
 const insertLine = require('insert-line')
-const fs = require('fs')
 var request = require('request')
-var pre = '>'
-let mods = ['xelasrl', 'tavenwebb2002', 'thelxinoe16']
 const Bot = new TwitchBot({
   username: 'XASRL',
-  oauth: 'oauth:7ps7atv9gspo7ldwotnkaptny4mjgq',
+  oauth: 'oauth:************************',
   channels: ['XelaSRL']
 })
 
