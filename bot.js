@@ -3,9 +3,10 @@ const insertLine = require('insert-line')
 const fs = require('fs')
 var request = require('request')
 var pre = '>'
+let mods = ['xelasrl', 'tavenwebb2002', 'thelxinoe16']
 const Bot = new TwitchBot({
   username: 'XASRL',
-  oauth: 'ooauth:*****************************',
+  oauth: 'oauth:7ps7atv9gspo7ldwotnkaptny4mjgq',
   channels: ['XelaSRL']
 })
 
@@ -33,9 +34,9 @@ function doSomething() {
 setInterval(doSomething, 900000);
 
 Bot.on('message', chatter => {
-  if (chatter.message.toLowerCase() === ">ping" {
+  if (chatter.message.toLowerCase() === ">ping") {
     Bot.say('Bot is online.')
-  })
+  }
 })
 
 Bot.on('message', chatter => {
@@ -79,30 +80,25 @@ Bot.on('message', (chatter, username) => {
 })
 
 Bot.on('message', (chatter, username) => {
-  if (chatter.message.toLowerCase().startsWith(">timeout")) {
-    var user = chatter.message.split(' ')[1]
-    var time = chatter.message.split(' ')[2]
-    if (chatter.username === 'xelasrl', 'xasrl', 'tavenwebb2002', 'thelxinoe16') {
-      Bot.say('/timeout ' + user + ' ' + time)
-    }
-  }
-})
 
-Bot.on('message', (chatter, username) => {
-  if (chatter.message.toLowerCase().startsWith(">purge")) {
-    var user = chatter.message.split(' ')[1]
-    if (chatter.username === 'xelasrl', 'xasrl', 'tavenwebb2002', 'thelxinoe16') {
-      Bot.say('/timeout ' + user + ' 1')
-    }
-  }
-})
+  if (chatter.username === 'xelasrl', 'tavenwebb2002', 'thelxinoe16') {
 
-Bot.on('message', (chatter, username) => {
-  if (chatter.message.toLowerCase().startsWith(">ban")) {
-    var user = chatter.message.split(' ')[1]
-    if (chatter.username === 'xelasrl', 'xasrl', 'tavenwebb2002', 'thelxinoe16') {
-      Bot.say('/ban ' + user)
-    }
+      if (chatter.message.toLowerCase().startsWith(">timeout")) {
+        var user = chatter.message.split(' ')[1]
+        var time = chatter.message.split(' ')[2]
+        Bot.say('/timeout ' + user + ' ' + time)
+      }
+
+      if (chatter.message.toLowerCase().startsWith(">purge")) {
+        var user = chatter.message.split(' ')[1]
+        Bot.say('/timeout ' + user + ' 1')
+      }
+
+      if (chatter.message.toLowerCase().startsWith(">ban")) {
+        var user = chatter.message.split(' ')[1]
+        Bot.say('/ban ' + user)
+      }
+
   }
 })
 
